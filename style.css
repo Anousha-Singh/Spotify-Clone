@@ -1,0 +1,28 @@
+body{
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.left{
+    width: 20vw;
+    height: 75vh;
+    background-color: white;
+}
+.right{
+    width: 80vw;
+    height: 75vh;
+    background-color: aqua;
+}
+
+.parent{
+    display: flex;
+    flex-direction: row;
+}
+
+.header{
+    width: 100vw;
+    height: 10vh;
+    background-color: blue;
+}
