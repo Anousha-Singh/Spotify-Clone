@@ -33,7 +33,6 @@ body{
     background-color: black;
     margin-right: 1rem;
     margin-left: 1rem;
-    /* margin-top: 0.5rem; */
     display: flex;
     align-items: center;
     justify-content:space-between;
@@ -58,6 +57,8 @@ body{
 .header3{
     display: flex;
     padding-right: 2rem;
+    justify-content: space-between;
+    gap: 2vw;
 }
 .search{
     display: flex;
@@ -83,7 +84,7 @@ body{
 }
 
 .installsvg, .notifysvg {
-    height: 3vh;
+    height: 2vh;
 }
 
 .notifysvg, .browsesvg, .searchsvg{
@@ -130,4 +131,10 @@ svg{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.installtext{
+    font-weight:500;
+    font-family: sans-serif;
+    font-size: small;
 }
