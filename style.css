@@ -10,14 +10,14 @@ body{
     width: 20vw;
     height: 75vh;
     border-radius: 7px;
-    margin-left: 0.5rem;
+    margin-left: 0.7rem;
     background-color: rgba(27, 26, 26, 0.951);
 }
 .right{
     width: 80vw;
     height: 75vh;
     background-color: rgba(27, 26, 26, 0.951);
-    margin-right: 0.5rem;
+    margin-right: 0.7rem;
     margin-left: 0.5rem;
     border-radius: 7px;
 }
@@ -29,10 +29,10 @@ body{
 
 .header{
     width: 100%;
-    height: 10vh;
+    height: 9vh;
     background-color: black;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
     /* margin-top: 0.5rem; */
     display: flex;
     align-items: center;
@@ -40,35 +40,77 @@ body{
     
 }
 
+.header1{
+    display: flex;
+    align-items: center;
+}
+.logosvg{
+    height: 45px;
+    margin-left: 1rem;
+}
+
 .header2{
     display: flex;
-    gap: 50px;
+    align-items: center;
+    gap: 10px;
 }
 
 .header3{
     display: flex;
+    padding-right: 2rem;
 }
 .search{
     display: flex;
+    padding: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
     justify-content:space-around;
     background-color: rgba(27, 26, 26, 0.951);
     /* border: solid 0.5px whitesmoke; */
-    border-radius: 50px;
+    border-radius: 2rem;
     align-items: center;
-    width: 20vw;
+    width: 30vw;
+    height: 5vh;
 }
 
-.homesvg, .notifysvg, .browsesvg, .searchsvg{
-    height: 30px;
+.search:focus-within{
+    border: solid 2px white;
+}
+
+.logosvg, .homesvg, .notifysvg, .browsesvg, .searchsvg, .installsvg{
+    height: 4.4vh;
     filter: invert();
+}
+
+.installsvg, .notifysvg {
+    height: 3vh;
+}
+
+.notifysvg, .browsesvg, .searchsvg{
+    fill: rgb(67, 67, 67);
 }
 
 .sep{
     background-color: whitesmoke;
-    height:30px;
-    width: 2px;
+    height:4vh;
+    width: 0.1vw;
+    margin-left: 5vw;
+}
+
+.searchinput{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 2.1vh;
+    height: 3vh;
+    font-family: sans-serif;
+    width: 17vw;
+    
+}
+
+.searchinput::placeholder{
+    color: rgb(188,188,188);
 }
 
 /* .homebtn{
@@ -77,4 +119,15 @@ body{
 
 svg{
     filter: invert();
+}
+
+.homeicon{
+    width: 2vw;
+    height: 2vw;
+    padding: 8px;
+    background-color: rgba(27, 26, 26, 0.951);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
