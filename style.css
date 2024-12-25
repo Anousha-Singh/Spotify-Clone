@@ -28,11 +28,12 @@ body{
 }
 
 .header{
-    width: 100%;
+    max-width: 100%;
+    width: 99vw;
     height: 9vh;
     background-color: black;
-    margin-right: 1rem;
-    margin-left: 1rem;
+    /* margin-right: 1rem;*/
+    margin-left: 1rem; 
     display: flex;
     align-items: center;
     justify-content:space-between;
@@ -48,17 +49,23 @@ body{
     margin-left: 1rem;
 }
 
+
+
 .header2{
     display: flex;
     align-items: center;
+    margin-left: 15vh;
     gap: 10px;
 }
 
 .header3{
     display: flex;
     padding-right: 2rem;
-    justify-content: space-between;
+    /* margin-right: 3vw; */
+    /* justify-content: space-between; */
     gap: 2vw;
+    /* width: 25vh; */
+    
 }
 .search{
     display: flex;
@@ -67,24 +74,38 @@ body{
     padding-bottom: 5px;
     justify-content:space-around;
     background-color: rgba(27, 26, 26, 0.951);
-    /* border: solid 0.5px whitesmoke; */
-    border-radius: 2rem;
+    border-radius: 2vw;
     align-items: center;
     width: 30vw;
     height: 5vh;
+    cursor: pointer;
 }
 
 .search:focus-within{
     border: solid 2px white;
+    pointer-events:none;
+    
+}
+
+.search:hover{
+    background-color: rgba(43, 41, 41, 0.951);
+    transition-timing-function:cubic-bezier(0.02, 0.31, 0.17, 1);
+    border: solid 1px rgb(67, 67, 67);
+    
 }
 
 .logosvg, .homesvg, .notifysvg, .browsesvg, .searchsvg, .installsvg{
     height: 4.4vh;
     filter: invert();
+    cursor: pointer;
+}
+
+.searchsvg{
+    height: 3.5vh;
 }
 
 .installsvg, .notifysvg {
-    height: 2vh;
+    height: 2.5vh;
 }
 
 .notifysvg, .browsesvg, .searchsvg{
@@ -92,7 +113,7 @@ body{
 }
 
 .sep{
-    background-color: whitesmoke;
+    background-color: rgb(67, 67, 67);
     height:4vh;
     width: 0.1vw;
     margin-left: 5vw;
@@ -114,9 +135,6 @@ body{
     color: rgb(188,188,188);
 }
 
-/* .homebtn{
-    padding: 50px;
-} */
 
 svg{
     filter: invert();
@@ -131,10 +149,31 @@ svg{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+
+.homeicon[title]:hover{
+    color: brown;
 }
 
 .installtext{
-    font-weight:500;
+    font-weight:600;
     font-family: sans-serif;
-    font-size: small;
+    font-size: 2.3vh;
+    cursor:pointer;
+}
+
+.installspan{
+    width:auto;
+    
+}
+
+
+.installspan:hover>.installsvg{
+    height: 2.8vh;
+    transition-timing-function:cubic-bezier(0, 0, 0.58, 0.72);
+}
+.installspan:hover>.installtext{
+    font-size: 2.5vh;
+    transition-timing-function:cubic-bezier(0, 0, 0.58, 0.72);
 }
