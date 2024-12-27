@@ -90,8 +90,18 @@ body{
 .search:hover{
     background-color: rgba(43, 41, 41, 0.951);
     transition-timing-function:cubic-bezier(0.02, 0.31, 0.17, 1);
+    transition: background-color linear;
     border: solid 1px rgb(67, 67, 67);
-    
+}
+
+.search:hover>div>.searchsvg{
+    fill: black;
+    transition: fill linear;
+}
+
+.search:hover>div>.browsesvg{
+    fill: black;
+    transition: fill linear;
 }
 
 .logosvg, .homesvg, .notifysvg, .browsesvg, .searchsvg, .installsvg{
@@ -169,7 +179,6 @@ svg{
     
 }
 
-
 .installspan:hover>.installsvg{
     height: 2.8vh;
     transition-timing-function:cubic-bezier(0, 0, 0.58, 0.72);
@@ -180,8 +189,9 @@ svg{
 }
 
 .addsvg, .arrowsvg{
-    height: 2.4vh;
+    height: 2.1vh;
     fill: rgb(67, 67, 67);
+    visibility: visible !important
 }
 
 .librarysvg{
@@ -205,4 +215,26 @@ svg{
     font-family: sans-serif;
     border-radius: 50px;
     font-size: 14px;
+}
+
+.lib:hover>.librarysvg{
+    fill: black;
+}
+
+.lib:hover>.librarytext{
+    color: white;
+}
+
+.addicon, .arrowicon{
+    padding: 6px;
+    background-color: rgb(36, 36, 36);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.addicon:hover, .arrowicon:hover{
+    visibility: visible;
 }
