@@ -110,7 +110,7 @@ body{
     cursor: pointer;
 }
 
-.searchsvg{
+.searchsvg, .browsesvg{
     height: 3.5vh;
 }
 
@@ -126,7 +126,7 @@ body{
     background-color: rgb(67, 67, 67);
     height:4vh;
     width: 0.1vw;
-    margin-left: 5vw;
+    margin-left: 4vw;
 }
 
 .searchinput{
