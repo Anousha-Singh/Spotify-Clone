@@ -11,12 +11,12 @@ body{
     height: 75vh;
     border-radius: 7px;
     margin-left: 0.7rem;
-    background-color: rgba(27, 26, 26, 0.951);
+    background-color: rgba(23, 22, 22, 0.951);
 }
 .right{
     width: 80vw;
     height: 75vh;
-    background-color: rgba(27, 26, 26, 0.951);
+    background-color: rgba(23, 22, 22, 0.951);
     margin-right: 0.7rem;
     margin-left: 0.5rem;
     border-radius: 7px;
@@ -194,4 +194,15 @@ svg{
     font-family: sans-serif;
     font-size: 1rem;
     font-weight: 700;
+}
+
+.leftoption{
+    padding: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: auto;
+    background-color: rgb(43, 42, 42);
+    font-family: sans-serif;
+    border-radius: 50px;
+    font-size: 14px;
 }
