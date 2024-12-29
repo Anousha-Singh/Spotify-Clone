@@ -49,8 +49,6 @@ body{
     margin-left: 1rem;
 }
 
-
-
 .header2{
     display: flex;
     align-items: center;
@@ -61,10 +59,7 @@ body{
 .header3{
     display: flex;
     padding-right: 2rem;
-    /* margin-right: 3vw; */
-    /* justify-content: space-between; */
     gap: 2vw;
-    /* width: 25vh; */
     
 }
 .search{
@@ -215,6 +210,11 @@ svg{
     font-family: sans-serif;
     border-radius: 50px;
     font-size: 14px;
+    cursor: pointer;
+}
+
+.leftoption:hover{
+    background-color: rgb(51, 50, 50);
 }
 
 .lib:hover>.librarysvg{
