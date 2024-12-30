@@ -183,7 +183,7 @@ svg{
     transition-timing-function:cubic-bezier(0, 0, 0.58, 0.72);
 }
 
-.addsvg, .arrowsvg{
+.addsvg, .arrowsvg,.leftsearchicon, .listicon{
     height: 2.1vh;
     fill: rgb(67, 67, 67);
     visibility: visible !important
