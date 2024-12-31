@@ -238,3 +238,52 @@ svg{
 .addicon:hover, .arrowicon:hover{
     visibility: visible;
 }
+
+.bottom{
+    /* background-color: rgb(54, 54, 54); */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+    height:15vh;
+    position: absolute;
+    bottom: 0;
+
+}
+
+.middlebottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: inherit;
+
+    
+}
+
+.playbuttons{
+    display: flex;
+    gap: 1.6vw;
+    align-items: center;
+    
+}
+
+.previcon, .mixicon, .nexticon, .repeaticon{
+    height: 1.1vw;
+    fill: rgb(67, 67, 67);
+}
+
+.playicon{
+    fill: white;
+    height: 1.3vw;
+}
+
+.playspan{
+    display: flex;
+    align-items: center;
+    height: auto;
+    padding: 8px;
+    background-color: white;
+    border-radius: 50%;
+}
+
