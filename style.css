@@ -287,3 +287,7 @@ svg{
     border-radius: 50%;
 }
 
+.songlist ul li{
+    list-style-type: none;
+    font-family: sans-serif;
+} 
