@@ -287,7 +287,42 @@ svg{
     border-radius: 50%;
 }
 
+.songlist ul{
+    padding: 0;
+}
+
+.songlist{
+    height: 25vw;
+    overflow: auto;
+    
+}
+
+.info {
+    width: 15vw;
+    margin-left: 1vw;
+}
+
 .songlist ul li{
     list-style-type: none;
     font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 1.5vw;
+    margin-bottom: 0.5vw;
+    width: 17vw;
+    font-size: 13px;
+    text-overflow: ellipsis;
 } 
+
+
+
+.musicicon{
+    fill: black;
+
+}
+
+.greenplayicon{
+    height: 3vw;
+    margin-left: 1vw;
+}
