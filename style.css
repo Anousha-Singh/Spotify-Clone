@@ -308,21 +308,40 @@ svg{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-left: 1.5vw;
+    margin-left: 0.3vw;
     margin-bottom: 0.5vw;
     width: 17vw;
     font-size: 13px;
     text-overflow: ellipsis;
+    cursor: pointer;
+    padding: 0 1vw;
+    border-radius: 0.5vw;
+    
 } 
 
 
 
 .musicicon{
     fill: black;
+    
 
 }
 
 .greenplayicon{
     height: 3vw;
     margin-left: 1vw;
+    visibility: hidden !important;
+    opacity: 0;
+    cursor: pointer;
+    transition: visibility 0.2s ease-in-out,opacity 0.2s ease-in-out;
+    
+}
+
+.songlist ul li:hover >.greenplayicon{
+    visibility: visible !important;
+    opacity: 1;
+}
+
+.songlist ul li:hover{
+    background-color: rgb(43, 43, 43);
 }
