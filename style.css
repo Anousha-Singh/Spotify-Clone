@@ -246,7 +246,7 @@ svg{
     justify-content: space-between;
     align-items: center;
     margin-top: 5px;
-    height:15vh;
+    height:17vh;
     position: absolute;
     bottom: 0;
 
@@ -257,7 +257,7 @@ svg{
     flex-direction: column;
     align-items: center;
     min-height: inherit;
-
+    gap: 1.5vw;
     
 }
 
@@ -320,11 +320,8 @@ svg{
 } 
 
 
-
 .musicicon{
     fill: black;
-    
-
 }
 
 .greenplayicon{
@@ -344,4 +341,24 @@ svg{
 
 .songlist ul li:hover{
     background-color: rgb(43, 43, 43);
+}
+
+.seekbar{
+    height: 3px;
+    background-color: white;
+    width: 33vw;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.circle{
+    height: 13px;
+    width: 13px;
+    background-color: white;
+    border-radius: 7px;
+    position: relative;
+    left: 0;
+    transition: left 0.5s;
 }
