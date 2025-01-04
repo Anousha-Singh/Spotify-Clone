@@ -273,18 +273,19 @@ svg{
     fill: rgb(67, 67, 67);
 }
 
-.playicon{
+#playicon{
     fill: white;
     height: 1.3vw;
 }
 
-.playspan{
+#playspan{
     display: flex;
     align-items: center;
     height: auto;
     padding: 8px;
     background-color: white;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .songlist ul{
@@ -324,7 +325,7 @@ svg{
     fill: black;
 }
 
-.greenplayicon{
+#greenplayicon{
     height: 3vw;
     margin-left: 1vw;
     visibility: hidden !important;
@@ -334,7 +335,7 @@ svg{
     
 }
 
-.songlist ul li:hover >.greenplayicon{
+.songlist ul li:hover >#greenplayicon{
     visibility: visible !important;
     opacity: 1;
 }
