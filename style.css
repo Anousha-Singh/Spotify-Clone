@@ -146,6 +146,18 @@ svg{
     filter: invert();
 }
 
+#recent{
+    transition: color 0.1s linear;
+}
+
+#recent:hover{
+    color: white !important
+}
+
+#recent:hover>svg{
+    fill: black;
+}
+
 .homeicon{
     width: 2vw;
     height: 2vw;
@@ -312,7 +324,7 @@ svg{
     margin-left: 0.3vw;
     margin-bottom: 0.5vw;
     width: 17vw;
-    font-size: 13px;
+    font-size: 15px;
     text-overflow: ellipsis;
     cursor: pointer;
     padding: 0 1vw;
