@@ -195,7 +195,7 @@ svg{
     transition-timing-function:cubic-bezier(0, 0, 0.58, 0.72);
 }
 
-.addsvg, .arrowsvg,.leftsearchicon, .listicon{
+.addsvg, .arrowsvg,.leftsearchsvg, .listicon{
     height: 2.1vh;
     fill: rgb(67, 67, 67);
     visibility: visible !important
@@ -237,8 +237,8 @@ svg{
     color: white;
 }
 
-.addicon, .arrowicon{
-    padding: 6px;
+.addicon, .arrowicon, .leftsearchicon{
+    padding: 7px;
     background-color: rgb(36, 36, 36);
     border-radius: 50%;
     display: flex;
@@ -247,9 +247,12 @@ svg{
     visibility: hidden;
 }
 
-.addicon:hover, .arrowicon:hover{
+.addicon:hover, .arrowicon:hover, .leftsearchicon:hover{
     visibility: visible;
 }
+
+
+
 
 .bottom{
     /* background-color: rgb(54, 54, 54); */
