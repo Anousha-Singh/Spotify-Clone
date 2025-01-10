@@ -20,7 +20,7 @@ body{
     margin-right: 0.7rem;
     margin-left: 0.5rem;
     border-radius: 7px;
-    background-image: linear-gradient(to bottom, rgb(52, 52, 52), black , black);
+    background-image: linear-gradient(to bottom, rgb(45, 45, 45),rgba(23, 22, 22, 0.951), rgba(23, 22, 22, 0.951) , rgba(23, 22, 22, 0.951));
 }
 
 .parent{
