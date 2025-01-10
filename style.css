@@ -20,6 +20,7 @@ body{
     margin-right: 0.7rem;
     margin-left: 0.5rem;
     border-radius: 7px;
+    background-image: linear-gradient(to bottom, rgb(52, 52, 52), black , black);
 }
 
 .parent{
@@ -229,6 +230,10 @@ svg{
     background-color: rgb(51, 50, 50);
 }
 
+.rightoption{
+    background-color: rgb(59, 59, 59);
+}
+
 .lib:hover>.librarysvg{
     fill: black;
 }
@@ -375,4 +380,12 @@ svg{
     position: relative;
     left: 0;
     transition: left 0.5s;
+}
+
+.playlist{
+    height: 6vw;
+}
+
+.topright{
+    
 }
