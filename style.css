@@ -271,9 +271,25 @@ svg{
     flex-direction: column;
     align-items: center;
     min-height: inherit;
-    gap: 1.5vw;
-    
+    gap: 15px;
+    height: 50px;
+
 }
+
+.bar{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.timeplayed, .totaltime{
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: rgb(160, 160, 160);
+}
+
+
 
 .playbuttons{
     display: flex;
