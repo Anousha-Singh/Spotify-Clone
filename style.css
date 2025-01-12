@@ -278,7 +278,8 @@ svg{
     align-items: center;
     min-height: inherit;
     gap: 15px;
-    height: 50px;
+    height: 40px;
+
 }
 
 .bar {
@@ -424,7 +425,7 @@ svg{
 }
 
 .rightoption:hover {
-    background-color: rgb(53, 51, 51); 
+    background-color: rgb(68, 68, 68); 
 }
 
 .rightoption.active:hover {
