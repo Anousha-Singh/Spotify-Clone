@@ -253,30 +253,35 @@ svg{
     visibility: visible;
 }
 
-.bottom{
+.bottom {
     /* background-color: rgb(54, 54, 54); */
     width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     margin-top: 5px;
-    height:17vh;
+    height: 17vh;
     position: absolute;
     bottom: 0;
-
 }
 
-.middlebottom{
+.leftbottom,
+.rightbottom {
+    flex: 0 0 auto;
+}
+
+.middlebottom {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: inherit;
     gap: 15px;
     height: 50px;
-
 }
 
-.bar{
+.bar {
     display: flex;
     gap: 8px;
     align-items: center;
