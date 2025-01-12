@@ -8,14 +8,14 @@ body{
 
 .left{
     width: 20vw;
-    height: 75vh;
+    height: 78vh;
     border-radius: 7px;
     margin-left: 0.7rem;
     background-color: rgba(23, 22, 22, 0.951);
 }
 .right{
     width: 80vw;
-    height: 75vh;
+    height: 78vh;
     background-color: rgba(23, 22, 22, 0.951);
     margin-right: 0.7rem;
     margin-left: 0.5rem;
