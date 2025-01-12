@@ -70,5 +70,16 @@ async function main() {
         }
     })
 }
+document.querySelectorAll('.rightoption').forEach(option => {
+    option.addEventListener('click', () => {
+        if (option.classList.contains('active')) {
+            document.querySelectorAll('.rightoption').forEach(opt => opt.classList.remove('active'));
+            document.querySelector('.rightoption:first-child').classList.add('active'); 
+        } else {
+            document.querySelectorAll('.rightoption').forEach(opt => opt.classList.remove('active'));
+            option.classList.add('active');
+        }
+    });
+});
 
 main()
