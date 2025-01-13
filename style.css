@@ -295,7 +295,9 @@ svg{
     color: rgb(160, 160, 160);
 }
 
-
+.songName, .artistName{
+    font-family: sans-serif;
+}
 
 .playbuttons{
     display: flex;
