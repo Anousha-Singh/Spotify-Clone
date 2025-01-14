@@ -303,14 +303,21 @@ svg{
 }
 
 .songName{
+    cursor: pointer;
     font-family: sans-serif;
     font-size: 16px;
 }
 
 .artistName{
+    cursor: pointer;
     font-family: sans-serif;
     color: rgb(160, 160, 160);
     font-size: 12px;
+}
+
+.songName:hover, .artistName:hover{
+    text-decoration: underline;
+    color: white;
 }
 
 #playbarimg svg{
@@ -344,6 +351,10 @@ svg{
     background-color: white;
     border-radius: 50%;
     cursor: pointer;
+}
+
+#playspan:active{
+    background-color: rgb(217, 217, 217);
 }
 
 .songlist ul{
