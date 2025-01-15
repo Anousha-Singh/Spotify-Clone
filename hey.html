@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seekbar with Audio</title>
+  <style>
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #1e1e1e; /* Dark background like Spotify */
+}
+
+.audio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+audio {
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #000;
+  border-radius: 10px;
+  padding: 10px;
+  color: #fff;
+}
+
+.seekbar-container {
+  position: relative;
+  width: 34vw; /* Width of the seekbar set to 34vw */
+  height: 8px;
+  background-color: #535353; /* Dark background for the seekbar */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.seekbar {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0;
+}
+
+.seekbar::-webkit-slider-runnable-track {
+  height: 100%;
+  background: transparent;
+  border-radius: 10px;
+}
+
+.seekbar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #1db954; /* Spotify green color */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.seekbar:hover::-webkit-slider-thumb {
+  background: #1ed760; /* Lighter green on hover */
+}
+
+.seekbar-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #1db954, #1ed760); /* Gradient like Spotify */
+}
+
+.seekbar-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #1db954;
+  border-radius: 10px;
+  transition: width 0.1s ease-out;
+}
+
+.seekbar-progress::before {
+  content: "";
+  position: absolute;
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="audio-container">
+    <audio id="audio" src="Songs/Mantra - JENNIE.mp3" controls></audio>
+    <div class="seekbar-container">
+      <input type="range" id="seekbar" class="seekbar" min="0" value="0">
+      <div class="seekbar-background"></div>
+      <div class="seekbar-progress"></div>
+    </div>
+  </div>
+
+  <script>
+    const audio = document.getElementById('audio');
+const seekbar = document.getElementById('seekbar');
+const progress = document.querySelector('.seekbar-progress');
+
+// Update the seekbar as the audio plays
+audio.addEventListener('timeupdate', () => {
+  const currentTime = audio.currentTime;
+  const duration = audio.duration;
+
+  // Avoid errors when audio duration is not available
+  if (duration) {
+    const value = (currentTime / duration) * 100;
+    seekbar.value = value;
+    progress.style.width = `${value}%`;
+  }
+});
+
+// Allow the user to seek to a different point when they move the seekbar
+seekbar.addEventListener('input', () => {
+  const value = seekbar.value;
+  const duration = audio.duration;
+
+  if (duration) {
+    const newTime = (value / 100) * duration;
+    audio.currentTime = newTime;
+  }
+});
+
+
+
+  </script>
+</body>
+</html>

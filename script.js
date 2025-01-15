@@ -97,13 +97,38 @@ async function main() {
         }
     })
 
-    currentSong.addEventListener("timeupdate",()=>{
+    // currentSong.addEventListener("timeupdate",()=>{
+    //     document.querySelector(".timeplayed").innerHTML = formatTime(currentSong.currentTime);
+    //     document.querySelector(".totaltime").innerHTML = formatTime(currentSong.duration);
+    //     document.querySelector(".circle").style.left = (currentSong.currentTime/currentSong.duration) +"%";
+    //     document.querySelector(".hoverbar").style.width = (currentSong.currentTime/currentSong.duration) +"%";
+    //     if(currentSong.ended){
+    //         playicon.innerHTML = `<svg style = "height:1vh; fill:black;" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 dYnaPI"><path d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"></path></svg></span>`;
+    //     }
+    // })
+
+    currentSong.addEventListener("timeupdate", () => {
         document.querySelector(".timeplayed").innerHTML = formatTime(currentSong.currentTime);
         document.querySelector(".totaltime").innerHTML = formatTime(currentSong.duration);
         if(currentSong.ended){
             playicon.innerHTML = `<svg style = "height:1vh; fill:black;" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 dYnaPI"><path d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"></path></svg></span>`;
         }
-    })
+    });
+
+    currentSong.addEventListener('timeupdate', () => {
+        const currentTime = currentSong.currentTime;
+        const duration = currentSong.duration;
+      
+        if (duration) {
+          const value = (currentTime / duration) * 100;
+        //   document.querySelector(".circle").value = value;
+          document.querySelector(".circle").style.left = `calc(${value}% - 6.5px)`;
+          document.querySelector(".hoverbar").style.width = `calc(${value}% + 6.5px)`;
+        }
+      });
+    
+    
+    
 }
 document.querySelectorAll('.rightoption').forEach(option => {
     option.addEventListener('click', () => {

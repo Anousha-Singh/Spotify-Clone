@@ -1,4 +1,4 @@
-body{
+body {
     background-color: black;
     color: white;
     margin: 0;
@@ -6,68 +6,71 @@ body{
     overflow: hidden;
 }
 
-.left{
+.left {
     width: 20vw;
     height: 78vh;
     border-radius: 7px;
     margin-left: 0.7rem;
     background-color: rgba(23, 22, 22, 0.951);
 }
-.right{
+
+.right {
     width: 80vw;
     height: 78vh;
     background-color: rgba(23, 22, 22, 0.951);
     margin-right: 0.7rem;
     margin-left: 0.5rem;
     border-radius: 7px;
-    background-image: linear-gradient(to bottom, rgb(45, 45, 45),rgba(23, 22, 22, 0.951), rgba(23, 22, 22, 0.951) , rgba(23, 22, 22, 0.951));
+    background-image: linear-gradient(to bottom, rgb(45, 45, 45), rgba(23, 22, 22, 0.951), rgba(23, 22, 22, 0.951), rgba(23, 22, 22, 0.951));
 }
 
-.parent{
+.parent {
     display: flex;
     flex-direction: row;
 }
 
-.header{
+.header {
     max-width: 100%;
     width: 99vw;
     height: 9vh;
     background-color: black;
-    margin-left: 1rem; 
+    margin-left: 1rem;
     display: flex;
     align-items: center;
-    justify-content:space-between;
-    
+    justify-content: space-between;
+
 }
 
-.header1{
+.header1 {
     display: flex;
     align-items: center;
 }
-.logosvg{
+
+.logosvg {
     height: 45px;
     margin-left: 1rem;
 }
 
-.header2{
+.header2 {
     display: flex;
     align-items: center;
     margin-left: 15vh;
     gap: 10px;
 }
 
-.header3{
+.header3 {
     display: flex;
     padding-right: 2rem;
     gap: 2vw;
-    
+
 }
-.search{
+
+.search {
     display: flex;
     padding: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
-    justify-content:space-around;
+    justify-content: space-around;
     background-color: rgba(27, 26, 26, 0.951);
     border-radius: 2vw;
     align-items: center;
@@ -76,55 +79,64 @@ body{
     cursor: pointer;
 }
 
-.search:focus-within{
+.search:focus-within {
     border: solid 2px white;
-    pointer-events:none;
-    
+    pointer-events: none;
+
 }
 
-.search:hover{
+.search:hover {
     background-color: rgba(43, 41, 41, 0.951);
-    transition-timing-function:cubic-bezier(0.02, 0.31, 0.17, 1);
+    transition-timing-function: cubic-bezier(0.02, 0.31, 0.17, 1);
     transition: background-color linear;
     border: solid 1px rgb(67, 67, 67);
 }
 
-.search:hover>div>.searchsvg{
+.search:hover>div>.searchsvg {
     fill: black;
     transition: fill linear;
 }
 
-.search:hover>div>.browsesvg{
+.search:hover>div>.browsesvg {
     fill: black;
     transition: fill linear;
 }
 
-.logosvg, .homesvg, .notifysvg, .browsesvg, .searchsvg, .installsvg{
+.logosvg,
+.homesvg,
+.notifysvg,
+.browsesvg,
+.searchsvg,
+.installsvg {
     height: 4.4vh;
     filter: invert();
     cursor: pointer;
 }
 
-.searchsvg, .browsesvg{
+.searchsvg,
+.browsesvg {
     height: 3.5vh;
 }
 
-.installsvg, .notifysvg {
+.installsvg,
+.notifysvg {
     height: 2.5vh;
 }
 
-.notifysvg, .browsesvg, .searchsvg{
+.notifysvg,
+.browsesvg,
+.searchsvg {
     fill: rgb(67, 67, 67);
 }
 
-.sep{
+.sep {
     background-color: rgb(67, 67, 67);
-    height:4vh;
+    height: 4vh;
     width: 0.1vw;
     margin-left: 4vw;
 }
 
-.searchinput{
+.searchinput {
     background-color: transparent;
     border: none;
     outline: none;
@@ -133,32 +145,32 @@ body{
     height: 3vh;
     font-family: sans-serif;
     width: 17vw;
-    
+
 }
 
-.searchinput::placeholder{
-    color: rgb(188,188,188);
-    
+.searchinput::placeholder {
+    color: rgb(188, 188, 188);
+
 }
 
 
-svg{
+svg {
     filter: invert();
 }
 
-#recent{
+#recent {
     transition: color 0.1s linear;
 }
 
-#recent:hover{
+#recent:hover {
     color: white !important
 }
 
-#recent:hover>svg{
+#recent:hover>svg {
     fill: black;
 }
 
-.homeicon{
+.homeicon {
     width: 2vw;
     height: 2vw;
     padding: 8px;
@@ -170,51 +182,56 @@ svg{
     cursor: pointer;
 }
 
-.homeicon[title]:hover{
+.homeicon[title]:hover {
     color: brown;
 }
 
-.installtext{
-    font-weight:600;
+.installtext {
+    font-weight: 600;
     font-family: sans-serif;
     font-size: 2.3vh;
-    cursor:pointer;
+    cursor: pointer;
 }
 
-.installspan{
-    width:auto;
-    
+.installspan {
+    width: auto;
+
 }
 
-.installspan:hover>.installsvg{
+.installspan:hover>.installsvg {
     height: 2.8vh;
-    transition-timing-function:cubic-bezier(0, 0, 0.58, 0.72);
-}
-.installspan:hover>.installtext{
-    font-size: 2.5vh;
-    transition-timing-function:cubic-bezier(0, 0, 0.58, 0.72);
+    transition-timing-function: cubic-bezier(0, 0, 0.58, 0.72);
 }
 
-.addsvg, .arrowsvg,.leftsearchsvg, .listicon{
+.installspan:hover>.installtext {
+    font-size: 2.5vh;
+    transition-timing-function: cubic-bezier(0, 0, 0.58, 0.72);
+}
+
+.addsvg,
+.arrowsvg,
+.leftsearchsvg,
+.listicon {
     height: 2.1vh;
     fill: rgb(67, 67, 67);
     visibility: visible !important
 }
 
-.librarysvg{
+.librarysvg {
     /* height: 3.5vh; */
     height: 1.5rem;
     fill: rgb(67, 67, 67);
 }
 
-.librarytext{
+.librarytext {
     color: rgb(160, 160, 160);
     font-family: sans-serif;
     font-size: 1.1rem;
     font-weight: 700;
 }
 
-.leftoption, .rightoption{
+.leftoption,
+.rightoption {
     padding: 8px;
     padding-left: 13px;
     padding-right: 13px;
@@ -226,20 +243,22 @@ svg{
     cursor: pointer;
 }
 
-.leftoption:hover{
+.leftoption:hover {
     background-color: rgb(51, 50, 50);
 }
 
 
-.lib:hover>.librarysvg{
+.lib:hover>.librarysvg {
     fill: black;
 }
 
-.lib:hover>.librarytext{
+.lib:hover>.librarytext {
     color: white;
 }
 
-.addicon, .arrowicon, .leftsearchicon{
+.addicon,
+.arrowicon,
+.leftsearchicon {
     padding: 7px;
     background-color: rgb(36, 36, 36);
     border-radius: 50%;
@@ -249,7 +268,9 @@ svg{
     visibility: hidden;
 }
 
-.addicon:hover, .arrowicon:hover, .leftsearchicon:hover{
+.addicon:hover,
+.arrowicon:hover,
+.leftsearchicon:hover {
     visibility: visible;
 }
 
@@ -263,7 +284,7 @@ svg{
     bottom: 0;
 }
 
-.leftbottom{
+.leftbottom {
     display: flex;
     gap: 10px;
     align-items: center;
@@ -290,60 +311,67 @@ svg{
 }
 
 .bar {
+    width: 100%;
+    color: white;
     display: flex;
     gap: 8px;
     align-items: center;
 }
 
-.timeplayed, .totaltime{
+.timeplayed,
+.totaltime {
     font-family: sans-serif;
     font-size: 13px;
     font-weight: 400;
     color: rgb(160, 160, 160);
 }
 
-.songName{
+.songName {
     cursor: pointer;
     font-family: sans-serif;
     font-size: 16px;
 }
 
-.artistName{
+.artistName {
     cursor: pointer;
     font-family: sans-serif;
     color: rgb(160, 160, 160);
     font-size: 12px;
 }
 
-.songName:hover, .artistName:hover{
+.songName:hover,
+.artistName:hover {
     text-decoration: underline;
     color: white;
 }
 
-#playbarimg svg{
+#playbarimg svg {
     height: 24px;
     width: 24px;
     padding: 10px;
 }
 
-.playbuttons{
+.playbuttons {
     display: flex;
     gap: 1.6vw;
     align-items: center;
-    
+
 }
 
-.previcon, .mixicon, .nexticon, .repeaticon{
+.previcon,
+.mixicon,
+.nexticon,
+.repeaticon {
     height: 1.1vw;
     fill: rgb(67, 67, 67);
 }
 
-#playicon{
+#playicon {
     fill: white;
     height: 1.3vw;
 }
 
-#playspan{
+#playspan {
     display: flex;
     align-items: center;
     height: auto;
@@ -353,19 +381,19 @@ svg{
     cursor: pointer;
 }
 
-#playspan:active{
+#playspan:active {
     background-color: rgb(217, 217, 217);
 }
 
-.songlist ul{
+.songlist ul {
     padding: 0;
 }
 
-.songlist{
+.songlist {
     height: 70%;
-    overflow:auto;
+    overflow: auto;
     max-height: 50vh;
-    
+
 }
 
 .info {
@@ -373,7 +401,7 @@ svg{
     margin-left: 1vw;
 }
 
-.songlist ul li{
+.songlist ul li {
     list-style-type: none;
     font-family: sans-serif;
     display: flex;
@@ -387,54 +415,79 @@ svg{
     cursor: pointer;
     padding: 0 1vw;
     border-radius: 0.5vw;
-    
-} 
+
+}
 
 
-.musicicon{
+.musicicon {
     fill: black;
 }
 
-#greenplayicon{
+#greenplayicon {
     height: 3vw;
     margin-left: 1vw;
     visibility: hidden !important;
     opacity: 0;
     cursor: pointer;
-    transition: visibility 0.2s ease-in-out,opacity 0.2s ease-in-out;
-    
+    transition: visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
+
 }
 
-.songlist ul li:hover >#greenplayicon{
+.songlist ul li:hover>#greenplayicon {
     visibility: visible !important;
     opacity: 1;
 }
 
-.songlist ul li:hover{
+.songlist ul li:hover {
     background-color: rgb(43, 43, 43);
 }
 
-.seekbar{
+.seekbar {
+    position: relative;
+    display: flex;
     height: 3px;
-    background-color: white;
+    background-color: rgb(145, 145, 145);
     width: 33vw;
     border-radius: 50px;
     display: flex;
     align-items: center;
+    cursor: pointer;
+}
+
+.hoverbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    height: 3px;
+    width: 0%;
+    transition: width 0.1s ease-out;
+    transition: background-color 0.1s;
+    z-index: 2;
     
 }
 
-.circle{
+.seekbar:hover>.hoverbar {
+    background-color: #1db954;
+}
+
+.seekbar:hover>.circle {
+    opacity: 1;
+}
+
+.circle {
+    left: 0;
     height: 13px;
     width: 13px;
     background-color: white;
-    border-radius: 7px;
+    border-radius: 50%;
+    transition: left 0.5s ease-out;
+    opacity: 0;
+    z-index: 3;
     position: relative;
-    left: 0;
-    transition: left 0.5s;
 }
 
-.playlist{
+.playlist {
     height: 6vw;
 }
 
@@ -443,8 +496,8 @@ svg{
     padding-left: 13px;
     padding-right: 13px;
     width: auto;
-    background-color: rgba(61, 59, 59, 0.937); 
-    color: white; 
+    background-color: rgba(61, 59, 59, 0.937);
+    color: white;
     font-family: sans-serif;
     border-radius: 50px;
     font-size: 14px;
@@ -453,15 +506,15 @@ svg{
 }
 
 .rightoption.active {
-    background-color: white; 
-    color: black; 
+    background-color: white;
+    color: black;
 }
 
 .rightoption:hover {
-    background-color: rgb(68, 68, 68); 
+    background-color: rgb(68, 68, 68);
 }
 
 .rightoption.active:hover {
-    background-color: white; 
-    color: black; 
+    background-color: white;
+    color: black;
 }
