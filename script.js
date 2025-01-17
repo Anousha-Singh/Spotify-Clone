@@ -18,7 +18,7 @@ function formatTime(seconds) {
     return `${minutes}:${formattedSeconds}`;
 }
 
-async function getSongs(){
+async function getSongs() {
     let res = await fetch("http://127.0.0.1:5500/songs/");
     let response = await res.text();
     // console.log(response);
@@ -31,7 +31,7 @@ async function getSongs(){
 
     for (let index = 0; index < as.length; index++) {
         const element = as[index];
-        if(element.title.endsWith(".mp3")){
+        if (element.title.endsWith(".mp3")) {
             songs.push(element.title);
         }
     }
@@ -39,16 +39,16 @@ async function getSongs(){
     return songs
 }
 
-const playMusic = (track, artist) =>{
+const playMusic = (track, artist) => {
     track = track.replace("&amp;", "&");
     artist = artist.replace("&amp;", "&");
-    console.log("/Songs/"+track+" - "+artist+".mp3");
-    currentSong.src = "/Songs/"+track+" - "+artist+".mp3";
+    console.log("/Songs/" + track + " - " + artist + ".mp3");
+    currentSong.src = "/Songs/" + track + " - " + artist + ".mp3";
     currentSong.play();
     playicon.innerHTML = `<svg style = "height:1vh; fill:black;" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 dYnaPI"><path d="M2.7 1a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7H2.7zm8 0a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7h-2.6z"></path></svg>`
     document.querySelector(".songName").innerHTML = track;
     document.querySelector(".artistName").innerHTML = artist;
-    
+
     playbarimg.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
             <circle cx="6.5" cy="18.5" r="3.5" stroke="currentColor" stroke-width="1.5" />
             <circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="1.5" />
@@ -63,8 +63,8 @@ async function main() {
     let songUL = document.querySelector(".songlist").getElementsByTagName("ul")[0];
 
     // console.log(songUL);
-    for(const song of songs) {
-      songUL.innerHTML = songUL.innerHTML + `
+    for (const song of songs) {
+        songUL.innerHTML = songUL.innerHTML + `
     <li>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
             <circle cx="6.5" cy="18.5" r="3.5" stroke="currentColor" stroke-width="1.5" />
@@ -74,43 +74,33 @@ async function main() {
         </svg>
         <div class="info">
             <div>${song.split(" - ")[0]}</div>
-            <div style="font-size:11px; color:rgb(147, 147, 147)">${song.split(" - ")[1].replace(".mp3","")}</div>
+            <div style="font-size:11px; color:rgb(147, 147, 147)">${song.split(" - ")[1].replace(".mp3", "")}</div>
         </div>
         <svg id="greenplayicon" fill="rgb(225, 40, 159)" viewBox="-5.6 -5.6 67.20 67.20" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0" transform="translate(17.92,17.92), scale(0.36)"><rect x="-5.6" y="-5.6" width="67.20" height="67.20" rx="33.6" fill="#ffffff" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M 27.9999 51.9063 C 41.0546 51.9063 51.9063 41.0781 51.9063 28 C 51.9063 14.9453 41.0312 4.0937 27.9765 4.0937 C 14.8983 4.0937 4.0937 14.9453 4.0937 28 C 4.0937 41.0781 14.9218 51.9063 27.9999 51.9063 Z M 23.7109 37.0469 C 22.6327 37.7031 21.4140 37.1875 21.4140 36.0625 L 21.4140 19.9375 C 21.4140 18.8594 22.7030 18.3906 23.7109 18.9766 L 36.8827 26.7812 C 37.8436 27.3437 37.8671 28.6797 36.8827 29.2656 Z"></path></g></svg>
     </li>`;
     }
-    
-    Array.from(document.querySelector(".songlist").getElementsByTagName('li')).forEach(e=>{
-        e.addEventListener("click", element=>{
+
+    Array.from(document.querySelector(".songlist").getElementsByTagName('li')).forEach(e => {
+        e.addEventListener("click", element => {
             console.log(e.querySelector(".info div:nth-child(1)").innerHTML)
             playMusic(e.querySelector(".info div:nth-child(1)").innerHTML.trim(), e.querySelector(".info div:nth-child(2)").innerHTML.trim())
         })
     })
 
-    playspan.addEventListener("click",()=>{
-        if(currentSong.paused){
+    playspan.addEventListener("click", () => {
+        if (currentSong.paused) {
             currentSong.play();
             playicon.innerHTML = `<svg style = "height:1vh; fill:black;" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 dYnaPI"><path d="M2.7 1a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7H2.7zm8 0a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7h-2.6z"></path></svg>`
-        }else{
+        } else {
             currentSong.pause();
             playicon.innerHTML = `<svg style = "height:1vh; fill:black;" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 dYnaPI"><path d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"></path></svg></span>`;
         }
     })
 
-    // currentSong.addEventListener("timeupdate",()=>{
-    //     document.querySelector(".timeplayed").innerHTML = formatTime(currentSong.currentTime);
-    //     document.querySelector(".totaltime").innerHTML = formatTime(currentSong.duration);
-    //     document.querySelector(".circle").style.left = (currentSong.currentTime/currentSong.duration) +"%";
-    //     document.querySelector(".hoverbar").style.width = (currentSong.currentTime/currentSong.duration) +"%";
-    //     if(currentSong.ended){
-    //         playicon.innerHTML = `<svg style = "height:1vh; fill:black;" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 dYnaPI"><path d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"></path></svg></span>`;
-    //     }
-    // })
-
     currentSong.addEventListener("timeupdate", () => {
         document.querySelector(".timeplayed").innerHTML = formatTime(currentSong.currentTime);
         document.querySelector(".totaltime").innerHTML = formatTime(currentSong.duration);
-        if(currentSong.ended){
+        if (currentSong.ended) {
             playicon.innerHTML = `<svg style = "height:1vh; fill:black;" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 dYnaPI"><path d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"></path></svg></span>`;
         }
     });
@@ -118,28 +108,34 @@ async function main() {
     currentSong.addEventListener('timeupdate', () => {
         const currentTime = currentSong.currentTime;
         const duration = currentSong.duration;
-      
+
         if (duration) {
-          const value = (currentTime / duration) * 100;
-        //   document.querySelector(".circle").value = value;
-          document.querySelector(".circle").style.left = `calc(${value}% - 6.5px)`;
-          document.querySelector(".hoverbar").style.width = `calc(${value}% + 6.5px)`;
+            const value = (currentTime / duration) * 100;
+            document.querySelector(".circle").style.left = `calc(${value}% - 6.5px)`;
+            document.querySelector(".hoverbar").style.width = `calc(${value}% )`;
         }
-      });
+    });
+
+    const seekBar = document.getElementById('seekbarinput');
+    seekBar.addEventListener('input', (e) => {
+        const duration = currentSong.duration;
+        const seekTime = (e.target.value / 100) * duration;
+        currentSong.currentTime = seekTime;
+    });
     
-    
-    
+
 }
 document.querySelectorAll('.rightoption').forEach(option => {
     option.addEventListener('click', () => {
         if (option.classList.contains('active')) {
             document.querySelectorAll('.rightoption').forEach(opt => opt.classList.remove('active'));
-            document.querySelector('.rightoption:first-child').classList.add('active'); 
+            document.querySelector('.rightoption:first-child').classList.add('active');
         } else {
             document.querySelectorAll('.rightoption').forEach(opt => opt.classList.remove('active'));
             option.classList.add('active');
         }
     });
+
 });
 
 main()

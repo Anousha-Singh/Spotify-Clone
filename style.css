@@ -464,7 +464,8 @@ svg {
     transition: width 0.1s ease-out;
     transition: background-color 0.1s;
     z-index: 2;
-    
+    border-radius: 50px;
+
 }
 
 .seekbar:hover>.hoverbar {
@@ -481,7 +482,7 @@ svg {
     width: 13px;
     background-color: white;
     border-radius: 50%;
-    transition: left 0.5s ease-out;
+    transition: left 0.1s ease-out;
     opacity: 0;
     z-index: 3;
     position: relative;
@@ -517,4 +518,26 @@ svg {
 .rightoption.active:hover {
     background-color: white;
     color: black;
+}
+
+
+#seekbarinput {
+    width: 33vw;
+    appearance: none;
+    background: transparent;
+    height: 2px;
+    border-radius: 50px;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    left: -2px;
+}
+
+#seekbarinput::-webkit-slider-thumb {
+    appearance: none;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
 }
