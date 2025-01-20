@@ -488,8 +488,32 @@ svg {
     position: relative;
 }
 
-.playlist {
+.playlists {
     height: 6vw;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.playlisttile{
+    display: flex;
+    align-items: center;
+    font-family:sans-serif;
+    font-weight:500;
+    color: white;
+    background-color: rgba(238, 238, 238, 0.187);
+    font-size: 14px;
+    width: 220px;
+    border-radius: 5px;
+    
+    gap: 10px;
+}
+
+.playlisttile img{
+    height:50px;
+    border-top-left-radius: 5px ;
+    border-bottom-left-radius: 5px;
 }
 
 .rightoption {
