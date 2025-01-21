@@ -22,6 +22,8 @@ body {
     margin-left: 0.5rem;
     border-radius: 7px;
     background-image: linear-gradient(to bottom, rgb(45, 45, 45), rgba(23, 22, 22, 0.951), rgba(23, 22, 22, 0.951), rgba(23, 22, 22, 0.951));
+    overflow-y: auto;
+    position: relative;
 }
 
 .parent {
@@ -493,7 +495,8 @@ svg {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
+    margin-right: 2rem;
 }
 
 .playlisttile{
@@ -504,9 +507,8 @@ svg {
     color: white;
     background-color: rgba(238, 238, 238, 0.187);
     font-size: 14px;
-    width: 220px;
+    width: calc((80vw/4) - 1.9rem);
     border-radius: 5px;
-    
     gap: 10px;
 }
 
@@ -544,6 +546,21 @@ svg {
     color: black;
 }
 
+.rightoptiondiv {
+    display: flex; 
+    padding: 5px;
+    gap: 5px; 
+    max-width: 100%; 
+    margin-bottom: 1.5rem; 
+    background-color: aqua;
+    width: 100%; 
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    box-sizing: border-box;
+}
 
 #seekbarinput {
     width: 33vw;
