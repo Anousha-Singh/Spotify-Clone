@@ -497,6 +497,8 @@ svg {
     flex-wrap: wrap;
     gap: 8px;
     margin-right: 2rem;
+    margin-left: 2rem;
+    
 }
 
 .playlisttile{
@@ -510,6 +512,7 @@ svg {
     width: calc((80vw/4) - 1.9rem);
     border-radius: 5px;
     gap: 10px;
+    min-width: 10vw;
 }
 
 .playlisttile img{
@@ -560,6 +563,7 @@ svg {
     top: 0; 
     z-index: 1000; 
     box-sizing: border-box;
+    background-image: linear-gradient(to bottom, rgb(45, 45, 45), rgba(23, 22, 22, 0.951));
 }
 
 #seekbarinput {
