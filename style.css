@@ -510,11 +510,12 @@ svg {
     color: white;
     background-color: rgba(238, 238, 238, 0.187);
     font-size: 14px;
-    width: calc((80vw/4) - 1.9rem);
+    width: calc((80vw/4) - 2rem);
     border-radius: 5px;
     gap: 10px;
     min-width: 10vw;
     cursor: pointer;
+    transition: background-color 0.2s;
 }
 
 
@@ -526,14 +527,21 @@ svg {
 
 #greenplaylist{
     height: 3vw;
+    padding: 0;
+    border-radius: 50%;
     margin-left: 1vw;
     visibility: hidden !important;
     opacity: 0;
     cursor: pointer;
-    transition: visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    transition: visibility 0.2s, opacity 0.2s ;
     z-index: 50;
     position: absolute;
     right: 5px;
+    
+}
+
+.playlisttile:hover{
+    background-color: rgba(251, 251, 251, 0.262);
 }
 
 .playlisttile:hover > #greenplaylist{
