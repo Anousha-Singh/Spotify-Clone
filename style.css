@@ -502,6 +502,7 @@ svg {
 }
 
 .playlisttile{
+    position: relative;
     display: flex;
     align-items: center;
     font-family:sans-serif;
@@ -513,12 +514,31 @@ svg {
     border-radius: 5px;
     gap: 10px;
     min-width: 10vw;
+    cursor: pointer;
 }
+
 
 .playlisttile img{
     height:50px;
     border-top-left-radius: 5px ;
     border-bottom-left-radius: 5px;
+}
+
+#greenplaylist{
+    height: 3vw;
+    margin-left: 1vw;
+    visibility: hidden !important;
+    opacity: 0;
+    cursor: pointer;
+    transition: visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    z-index: 50;
+    position: absolute;
+    right: 5px;
+}
+
+.playlisttile:hover > #greenplaylist{
+    visibility: visible !important;
+    opacity: 1;
 }
 
 .rightoption {
@@ -551,11 +571,12 @@ svg {
 
 .rightoptiondiv {
     display: flex; 
-    padding: 5px;
-    gap: 5px; 
+    padding-top: 15px;
+    padding-left: 2rem;
+    gap: 8px; 
     max-width: 100%; 
     margin-bottom: 1.5rem; 
-    background-color: aqua;
+    background-color: transparent;
     width: 100%; 
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
@@ -563,7 +584,7 @@ svg {
     top: 0; 
     z-index: 1000; 
     box-sizing: border-box;
-    background-image: linear-gradient(to bottom, rgb(45, 45, 45), rgba(23, 22, 22, 0.951));
+    
 }
 
 #seekbarinput {
