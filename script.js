@@ -105,23 +105,22 @@ async function main() {
         }
     });
 
-    currentSong.addEventListener('timeupdate', () => {
+    currentSong.addEventListener("timeupdate", ()=>{
         const currentTime = currentSong.currentTime;
         const duration = currentSong.duration;
+        const value = (currentTime / duration) * 100;
+        document.querySelector(".circle").style.left = `calc(${value}% - 6.5px)`;
+        document.querySelector(".hoverbar").style.width  = value+"%";
+    })
 
-        if (duration) {
-            const value = (currentTime / duration) * 100;
-            document.querySelector(".circle").style.left = `calc(${value}% - 6.5px)`;
-            document.querySelector(".hoverbar").style.width = `calc(${value}% )`;
-        }
-    });
+    document.querySelector("#seekbarinput").addEventListener("click", (e)=>{
+        let percent = (e.offsetX/e.target.getBoundingClientRect().width)*100;
+        document.querySelector(".circle").style.left = `${percent}%`;
 
-    const seekBar = document.getElementById('seekbarinput');
-    seekBar.addEventListener('input', (e) => {
-        const duration = currentSong.duration;
-        const seekTime = (e.target.value / 100) * duration;
-        currentSong.currentTime = seekTime;
-    });
+        currentSong.currentTime = ((currentSong.duration)*percent)/100;
+        const value = (currentTime / duration) * 100;
+        document.querySelector(".hoverbar").style.width  = value+"%";
+    })
     
 
 }

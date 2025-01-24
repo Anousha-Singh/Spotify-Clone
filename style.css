@@ -479,7 +479,7 @@ svg {
 }
 
 .circle {
-    left: 0;
+    left: -6.5px;
     height: 13px;
     width: 13px;
     background-color: white;
@@ -605,6 +605,7 @@ svg {
     cursor: pointer;
     position: absolute;
     left: -2px;
+    z-index: 10;
 }
 
 #seekbarinput::-webkit-slider-thumb {
