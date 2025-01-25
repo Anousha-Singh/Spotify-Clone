@@ -122,6 +122,7 @@ async function main() {
         document.querySelector(".hoverbar").style.width  = value+"%";
     })
     
+    
 
 }
 document.querySelectorAll('.rightoption').forEach(option => {

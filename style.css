@@ -360,12 +360,13 @@ svg {
 
 }
 
-.previcon,
+#previcon,
 .mixicon,
-.nexticon,
+#nexticon,
 .repeaticon {
     height: 1.1vw;
     fill: rgb(67, 67, 67);
+    cursor: pointer;
 }
 
 #playicon {
